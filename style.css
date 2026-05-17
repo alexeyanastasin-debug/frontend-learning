@@ -35,3 +35,11 @@ button {
 .btn-secondary {
     background-color: #6c757d;
 }
+
+
+@media (min-width: 768px) {
+    body {
+        background-color: #e0f7fa;
+        .profile-card { width: 450px; }
+    }
+}
