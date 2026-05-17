@@ -1,3 +1,7 @@
+import { toggleContent } from './modules/toggle.js';
+
+
+
 const profileData = {
     name: 'Алексей Анастасин',
     target: 'Цель: Стать Front-end разработчиком в 2026 году',
@@ -34,12 +38,3 @@ emailButton.addEventListener('click', () => {
     
 });
 
-function toggleContent(element, condition, textOne, textTwo) {
-    if(condition === false) {
-        element.textContent = textOne;
-        return true;
-    } else { 
-        element.textContent = textTwo;
-        return false;
-    }
-};
