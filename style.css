@@ -36,6 +36,11 @@ button {
     background-color: #6c757d;
 }
 
+.btn-success {
+    background-color: #28a745 !important;
+}
+
+
 
 @media (min-width: 768px) {
     body {
