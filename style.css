@@ -40,6 +40,9 @@ button {
 @media (min-width: 768px) {
     body {
         background-color: #e0f7fa;
-        .profile-card { width: 450px; }
+    }
+
+    .profile-card { 
+        width: 450px; 
     }
 }
