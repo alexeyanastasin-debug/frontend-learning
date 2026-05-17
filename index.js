@@ -1,7 +1,16 @@
-const skills = ['HTML5', 'CSS3', 'JavaScript', 'Git / GitHub'];
+const profileData = {
+    name: 'Алексей Анастасин',
+    target: 'Цель: Стать Front-end разработчиком в 2026 году',
+    email: 'alexey@example.com',
+    skills: ['HTML5', 'CSS3', 'JavaScript', 'Git / GitHub']
+};
+
+const profileName = document.querySelector('h2');
+profileName.textContent = profileData.name
+
 const skillsList = document.querySelector('.skills-list');
 
-skills.forEach(skill => {
+profileData.skills.forEach(skill => {
     const li = document.createElement('li');
     li.textContent = skill;
     skillsList.appendChild(li);
@@ -27,10 +36,10 @@ let isEmailShown = false;
 
 emailButton.addEventListener('click', () => {
     if (isEmailShown === false) { 
-        profileText.textContent = 'Моя почта: alexey@example.com';
+        profileText.textContent = profileData.email;
         isEmailShown = true;
     } else {
-         profileText.textContent = 'Цель: Стать Front-end разработчиком в 2026 году';
+         profileText.textContent = profileData.target;
          isEmailShown = false;
     }
 });
