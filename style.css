@@ -40,6 +40,11 @@ button {
     background-color: #28a745 !important;
 }
 
+.skills-list {
+    list-style: none;
+    padding: 0;
+    
+}
 
 
 @media (min-width: 768px) {

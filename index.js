@@ -5,7 +5,7 @@ skills.forEach(skill => {
     const li = document.createElement('li');
     li.textContent = skill;
     skillsList.appendChild(li);
-})
+});
 
 const orderButton = document.querySelector('.bth');
 let isOrder = false;
