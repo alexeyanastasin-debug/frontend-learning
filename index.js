@@ -1,6 +1,12 @@
 const orderButton = document.querySelector('.bth');
-orderButton.addEventListener('click', function() {
-     alert ('Спасибо за заказ! Я свяжусь с вами.')
+orderButton.addEventListener('click', () => { 
+    if(isOrder === false) {
+        orderButton.textContent = 'Заказ принят';
+        isOrder = true;
+    } else { 
+        orderButton.textContent = 'Заказать';
+        isOrder = false;
+    }
 });
 
 const emailButton = document.querySelector('.btn-secondary');
@@ -17,3 +23,4 @@ emailButton.addEventListener('click', () => {
 });
 
 let isEmailShown = false;
+let isOrder = false;
