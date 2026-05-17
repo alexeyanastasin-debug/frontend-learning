@@ -18,31 +18,28 @@ profileData.skills.forEach(skill => {
 
 const orderButton = document.querySelector('.bth');
 let isOrder = false;
+
 orderButton.addEventListener('click', () => { 
-    if(isOrder === false) {
-        orderButton.textContent = 'Заказ принят';
-        orderButton.classList.toggle('btn-success');
-        isOrder = true;
-    } else { 
-        orderButton.textContent = 'Заказать';
-        orderButton.classList.toggle('btn-success');
-        isOrder = false;
-    }
+    isOrder = toggleContent(orderButton, isOrder, 'Заказ принят', 'Заказать');
+    orderButton.classList.toggle('btn-success'); // Класс переключается всегда при клике
 });
+
 
 const emailButton = document.querySelector('.btn-secondary');
 const profileText = document.querySelector('.profile-text');
 let isEmailShown = false;
 
 emailButton.addEventListener('click', () => {
-    if (isEmailShown === false) { 
-        profileText.textContent = profileData.email;
-        isEmailShown = true;
-    } else {
-         profileText.textContent = profileData.target;
-         isEmailShown = false;
-    }
+    isEmailShown = toggleContent(profileText, isEmailShown, profileData.email, profileData.target);
+    
 });
 
-
-
+function toggleContent(element, condition, textOne, textTwo) {
+    if(condition === false) {
+        element.textContent = textOne;
+        return true;
+    } else { 
+        element.textContent = textTwo;
+        return false;
+    }
+};
